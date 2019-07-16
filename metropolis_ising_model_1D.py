@@ -96,7 +96,7 @@ J = .1  # valor da "integral de troca"
 alpha = start_config(N, cold = True)
 
 T_array = np.linspace(0,1,100)[1:]
-E_array = np.array([energy_media_T(alpha, N, M, T) for T in T_array])
+E_array = np.array([ energy_media_T(alpha, N, M, T) for T in T_array] )
 E_analitico = -J * N * np.tanh(J/T_array)
 
 fig1 = plt.figure()
